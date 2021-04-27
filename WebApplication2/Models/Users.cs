@@ -8,7 +8,7 @@ namespace WebApplication2.Models
     public class Users
     {
 
-        public int FirstName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
 
     }
