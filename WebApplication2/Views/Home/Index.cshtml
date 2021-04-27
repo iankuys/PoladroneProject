@@ -2,14 +2,30 @@
 
 @{
     ViewBag.Title = "Our Users";
+    int count = 1;
 }
 
 <h2>Users List</h2>
-<ul>
-    @foreach (var usr in (List<WebApplication2.Models.Users>)ViewData["Users"])
-    {
-        <li>@usr.FirstName @usr.LastName</li>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usr in (List<WebApplication2.Models.Users>)ViewData["Users"])
+        {
 
-    }
-</ul>
+            <tr>
+                <th scope="row">@(count++)</th>
+                <td>@usr.FirstName</td>
+                <td>@usr.LastName</td>
+            </tr>
+
+
+        }
+    </tbody>
+</table>
 
